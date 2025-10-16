@@ -176,3 +176,85 @@ section#transform-world h2 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   }
 }
+/* largura máxima p/ todo conteúdo interno */
+.container,
+#course-content,
+#professional-challenges {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* tipografia e espaçamento padrão das seções */
+section { padding: 72px 20px; }
+section h2 { margin: 0 0 18px; }
+section p  { color: #aeb6c5; line-height: 1.6; }
+/* título já existe; só reforço peso */
+#course-content h2 {
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#course-content > p {
+  text-align: center;
+  margin: 0 auto 28px;
+  max-width: 820px;
+}
+
+/* grid de módulos */
+.modules-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* cada card */
+.module{
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  transition: transform .15s ease, border-color .2s;
+}
+.module:hover{
+  transform: translateY(-2px);
+  border-color: rgba(123,92,255,.55);
+}
+.module span{ font-weight: 800; color:#fff; }
+/* já aplicado; acrescento limite de largura no h2 para quebrar bem */
+#transform-world h2{
+  max-width: 900px;
+  margin: 0 auto;
+}
+#professional-challenges{
+  text-align: center;
+}
+#professional-challenges h2{
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+#professional-challenges img{
+  width: min(980px, 100%);
+  height: auto;
+  display: block;
+  margin: 10px auto 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+}
+#professional-challenges p{
+  max-width: 880px;
+  margin: 0 auto;
+}
+/* margem inferior do topo para “desgrudar” do resto */
+header.banner{ margin-bottom: 24px; }
+
+/* botão com foco/teclado acessível */
+header.banner button:focus{
+  outline: 3px solid rgba(49,195,168,.8);
+  outline-offset: 2px;
+}
