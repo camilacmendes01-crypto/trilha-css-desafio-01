@@ -251,10 +251,65 @@ section p  { color: #aeb6c5; line-height: 1.6; }
   margin: 0 auto;
 }
 /* margem inferior do topo para “desgrudar” do resto */
-header.banner{ margin-bottom: 24px; }
+header.banner{ /* ====== BANNER ====== */
+header.banner {
+  background: linear-gradient(180deg, #090d1f 0%, #0b0d12 100%);
+  padding: 60px 20px 120px;
+  text-align: center;
+  color: white;
+}
 
-/* botão com foco/teclado acessível */
-header.banner button:focus{
-  outline: 3px solid rgba(49,195,168,.8);
-  outline-offset: 2px;
+/* centraliza o conteúdo */
+header.banner .banner-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* logotipo */
+header.banner .logo img {
+  height: 90px;
+  margin-bottom: 16px;
+}
+
+/* título com gradiente animado */
+header.banner h1 {
+  font-weight: 800;
+  font-size: clamp(28px, 6vw, 54px);
+  margin: 6px 0 8px;
+  background: linear-gradient(90deg, #7b5cff, #31c3a8, #7b5cff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: brilho 5s linear infinite;
+}
+
+@keyframes brilho {
+  to {
+    background-position: 200% center;
+  }
+}
+
+header.banner p {
+  font-size: clamp(16px, 2.3vw, 18px);
+  color: #aeb6c5;
+  margin-bottom: 20px;
+}
+
+/* botão */
+header.banner button {
+  background-color: #31c3a8;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 26px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header.banner button:hover {
+  background-color: #25a58e;
+  transform: translateY(-2px);
 }
