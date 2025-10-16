@@ -144,3 +144,35 @@ footer a,
 }
 footer a:hover,
 #footer a:hover { text-decoration: underline; }
+/* SEÇÃO "TRANSFORME O MUNDO COM A GENTE" */
+section#transform-world {
+  background-image: url("assets/images/woman-code.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 120px 20px;
+  color: white;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);
+}
+
+section#transform-world h2 {
+  font-size: clamp(24px, 5vw, 44px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  animation: brilhoSuave 8s linear infinite;
+}
+
+/* Animação de brilho sutil no texto */
+@keyframes brilhoSuave {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
