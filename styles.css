@@ -556,3 +556,79 @@ header.banner button:hover{
   transform: translateY(-2px);
   box-shadow: 0 0 22px rgba(49,195,168,.45);
 }
+/* === OVERRIDES FINAIS: topo idêntico ao exemplo === */
+
+/* fundo do banner com imagem + “luz” azul + gradiente */
+header.banner {
+  padding: 100px 20px 110px !important;
+  background:
+    radial-gradient(60% 50% at 50% 10%, rgba(27,110,165,.35) 0%, rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, rgba(13,18,40,.95) 0%, rgba(11,13,18,.9) 60%, #0b0d12 100%),
+    url("./assets/images/banner.png");
+  background-size: cover, 100% 100%, cover;
+  background-position: center, center, center;
+  position: relative;
+  text-align: center;
+}
+
+/* linha divisória sob o banner */
+header.banner::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:1px;
+  background: linear-gradient(90deg,
+              rgba(123,92,255,.45),
+              rgba(49,195,168,.65),
+              rgba(123,92,255,.45));
+  opacity:.7;
+}
+
+/* logo — força tamanho igual ao exemplo */
+header.banner .banner-content .logo img{
+  height: clamp(96px, 11vw, 130px) !important;
+  margin: 0 auto 14px !important;
+  display:block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.55));
+}
+
+/* título com gradiente (mantém a animação) */
+header.banner .banner-content h1{
+  font-weight:800;
+  font-size: clamp(30px, 6vw, 56px) !important;
+  margin: 8px 0 12px !important;
+  text-transform: uppercase;
+  letter-spacing:.6px;
+  background: linear-gradient(90deg, #7bd0ef, #38c3aa, #7bd0ef);
+  background-size: 200% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation: brilho 5s linear infinite;
+}
+
+/* subtítulo com largura limitada */
+header.banner .banner-content p{
+  max-width: 720px;
+  margin: 0 auto 24px !important;
+  color:#aeb6c5;
+  font-size: clamp(15px, 2.2vw, 17px);
+}
+
+/* botão outline turquesa (igual ao exemplo) */
+header.banner .banner-content button{
+  background: transparent !important;
+  border: 2px solid #38c3aa !important;
+  color: #38c3aa !important;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 14px 28px !important;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .2s, background-color .25s, box-shadow .25s;
+}
+header.banner .banner-content button:hover{
+  background: #38c3aa !important;
+  color: #0b0d12 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(49,195,168,.45);
+}
