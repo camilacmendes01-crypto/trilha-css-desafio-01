@@ -8,3 +8,47 @@ body {
 h1 {
   color: #7b5cff;
 }
+
+/* BANNER (usa o que já existe no seu HTML) */
+header.banner{
+  background: rgba(10,12,18,.35);
+  backdrop-filter: blur(6px);
+  padding: 28px 0 40px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  text-align: center;
+}
+
+/* logo do topo */
+header.banner .logo img{ height: 64px; margin: 0 auto 12px; display:block; }
+
+/* TÍTULO com gradiente: "Trilha de CSS da DIO" */
+header.banner h1{
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 800;
+  margin: 6px 0 8px;
+
+  /* gradiente no texto (dica da professora) */
+  background: linear-gradient(90deg, #7b5cff, #31c3a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* subtítulo (o parágrafo logo abaixo do h1) */
+header.banner p{
+  margin: 0 0 16px;
+  color: #aeb6c5;        /* cinza suave */
+}
+
+/* BOTÃO "Quero me inscrever" */
+header.banner button{
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7b5cff, #31c3a8);
+  color: #0b0d12;
+}
+header.banner button:hover{ filter: brightness(1.06); }
