@@ -313,3 +313,84 @@ header.banner button:hover {
   background-color: #25a58e;
   transform: translateY(-2px);
 }
+/* ======== AJUSTE FINO DO BANNER (igual ao exemplo) ======== */
+header.banner{
+  /* gradiente de fundo + espaço */
+  background: linear-gradient(180deg, #0d1228 0%, #0a0f1f 60%, #0b0d12 100%);
+  padding: 80px 20px 100px;
+  position: relative;
+  text-align: center;
+}
+
+/* brilho suave por trás do título */
+header.banner::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 45% at 50% 0%,
+              rgba(48,195,168,.20) 0%,
+              rgba(123,92,255,.10) 35%,
+              rgba(0,0,0,0) 65%);
+  pointer-events: none;
+}
+
+/* linha fina sob o banner (divider) */
+header.banner::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+              rgba(123,92,255,.45),
+              rgba(49,195,168,.65),
+              rgba(123,92,255,.45));
+  opacity: .7;
+}
+
+header.banner .banner-content{ max-width: 1000px; margin: 0 auto; }
+
+/* logo central com leve sombra */
+header.banner .logo img{
+  height: 92px;
+  margin: 0 auto 16px;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.55));
+}
+
+/* título com aparência mais “ciano” */
+header.banner h1{
+  font-weight: 800;
+  font-size: clamp(28px, 6vw, 54px);
+  margin: 6px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  background: linear-gradient(180deg, #8bdcf0 0%, #38c3aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* parágrafo do topo */
+header.banner p{
+  color: #aeb6c5;
+  font-size: clamp(15px, 2.2vw, 17px);
+  margin-bottom: 20px;
+}
+
+/* botão estilo “outline” turquesa (igual ao exemplo) */
+header.banner button{
+  background: transparent;
+  border: 2px solid #31c3a8;
+  color: #31c3a8;
+  border-radius: 8px;
+  padding: 12px 26px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, background-color .25s, box-shadow .25s;
+}
+header.banner button:hover{
+  background: #31c3a8;
+  color: #0b0d12;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(49,195,168,.45);
+}
