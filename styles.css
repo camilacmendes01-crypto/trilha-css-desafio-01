@@ -26,12 +26,18 @@ header.banner h1{
   font-size: clamp(28px, 5vw, 56px);
   font-weight: 800;
   margin: 6px 0 8px;
-
-  /* gradiente no texto (dica da professora) */
   background: linear-gradient(90deg, #7b5cff, #31c3a8);
+  background-size: 200% auto; /* faz o gradiente "correr" */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: brilho 5s linear infinite;
+}
+
+@keyframes brilho {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* subtítulo (o parágrafo logo abaixo do h1) */
