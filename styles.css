@@ -96,3 +96,45 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* ====== PARALLAX (Transforme o mundo...) – cobre duas opções de ID ====== */
+section#transform-world,
+section#professional-challenges {
+  background-image: url('assets/images/woman-code.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+}
+
+section#transform-world h2,
+section#professional-challenges h2 {
+  font-size: clamp(24px, 5vw, 44px);
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0,0,0,.8);
+}
+
+/* ====== RODAPÉ – cobre <footer> e #footer ====== */
+footer,
+#footer {
+  background-color: #0b0d12;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer img,
+#footer img {
+  height: 50px;
+  margin-bottom: 12px;
+}
+
+footer a,
+#footer a {
+  color: #7b5cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover,
+#footer a:hover { text-decoration: underline; }
